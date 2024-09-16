@@ -5,16 +5,16 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Boxes</Text>
-      <View style={styles['red-box']}>
+      <View style={[styles['box'], styles['red-box']]}>
         <Text style={styles.text}>Red</Text>
       </View>
-      <View style={styles['blue-box']}>
+      <View style={[styles['box'], styles['blue-box']]}>
         <Text style={styles.text}>Blue</Text>
       </View>
-      <View style={styles['green-box']}>
+      <View style={[styles['box'], styles['green-box']]}>
         <Text style={styles.text}>Green</Text>
       </View>
-      <View style={styles['violet-box']}>
+      <View style={[styles['box'], styles['violet-box']]}>
         <Text style={styles.text}>Violet</Text>
       </View>
     </View>
@@ -41,36 +41,24 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
   },
-  'red-box': {
-    backgroundColor: 'red',
+  box: {
     alignItems: 'center',
     justifyContent: 'center',
     padding: 4,
     alignSelf: 'stretch',
     marginTop: 10,
+    borderRadius: 4,
+  },
+  'red-box': {
+    backgroundColor: 'red',
   },
   'blue-box': {
     backgroundColor: 'blue',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 4,
-    alignSelf: 'stretch',
-    marginTop: 10,
   },
   'green-box': {
     backgroundColor: 'green',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 4,
-    alignSelf: 'stretch',
-    marginTop: 10,
   },
   'violet-box': {
     backgroundColor: 'violet',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 4,
-    alignSelf: 'stretch',
-    marginTop: 10,
   },
 })
